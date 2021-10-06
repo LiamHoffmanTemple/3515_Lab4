@@ -10,7 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ImageActivity">
         <activity
-            android:name=".MainActivity"
+            android:name=".DisplayActivity"
+            android:label="Close up view"
+            android:exported="true" />
+        <activity
+            android:name=".SelectionActivity"
+            android:label="Selection view"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

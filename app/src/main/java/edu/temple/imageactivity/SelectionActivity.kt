@@ -3,18 +3,18 @@ package edu.temple.imageactivity
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.GridLayoutManager
-import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.activity_selection.*
 
-class MainActivity : AppCompatActivity() {
+class SelectionActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_selection)
         var dataList = mutableListOf<ImageData>()
         var  imageAdapter: ImageAdapter = ImageAdapter(this)
         recyclerView.layoutManager = GridLayoutManager(this,2)
         recyclerView.adapter = imageAdapter
-
+        this
         dataList.add(ImageData("Abyssinian",R.drawable.abyssinian))
         dataList.add(ImageData("Bengal",R.drawable.bengal))
         dataList.add(ImageData("Bombay",R.drawable.bombay))

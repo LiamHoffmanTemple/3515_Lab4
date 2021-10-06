@@ -1,13 +1,15 @@
 package edu.temple.imageactivity
 
 import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
-import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.activity_selection.*
 import android.app.Activity as Activity
 
 
@@ -42,8 +44,15 @@ class ImageAdapter(var context: Context) : RecyclerView.Adapter<ImageAdapter.Vie
         holder.image.setImageResource(images.image)
 
         holder.image.setOnClickListener(){
-            (context as Activity).findViewById<ImageView>(R.id.imageView).setImageResource(images.image)
-            (context as Activity).findViewById<TextView>(R.id.imageTitle).text = images.title
+            val intent = Intent(context, DisplayActivity::class.java).apply {
+                putExtra("title", images.title)
+                putExtra("image", images.image)
+            }
+
+            context.startActivity(intent)
+
+            //(context as Activity).findViewById<ImageView>(R.id.imageView).setImageResource(images.image)
+            //(context as Activity).findViewById<TextView>(R.id.imageTitle).text = images.title
         }
 
     }
