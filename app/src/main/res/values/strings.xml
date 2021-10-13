@@ -1,3 +1,16 @@
 <resources>
     <string name="app_name">ImageActivity</string>
+    <string name="recyclerText">Click an image below to view</string>
+    <string-array name="cats">
+        <item>Abyssinian</item>
+        <item>Bengal</item>
+        <item>Bombay</item>
+        <item>Maine Coon</item>
+        <item>Munchkin</item>
+        <item>Persian</item>
+        <item>Savannah</item>
+        <item>Scottish Fold</item>
+        <item>Siamese</item>
+        <item>Tabby</item>
+    </string-array>
 </resources>

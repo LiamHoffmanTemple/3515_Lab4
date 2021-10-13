@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ImageActivity</string>
+    <string name="recyclerText">Cliquez sur une image ci-dessous pour voir</string>
+    <string-array name="cats">
+        <item>Abyssinienne</item>
+        <item>Bengale</item>
+        <item>Bombay</item>
+        <item>Maine Coon</item>
+        <item>Munchkin</item>
+        <item>Persane</item>
+        <item>Savane</item>
+        <item>Pli écossais</item>
+        <item>Siamoise</item>
+        <item>Tigrée</item>
+    </string-array>
+
+</resources>
