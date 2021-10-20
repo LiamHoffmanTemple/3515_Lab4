@@ -14,7 +14,7 @@
             android:label="Close up view"
             android:exported="true" />
         <activity
-            android:name=".SelectionActivity"
+            android:name=".MainActivity"
             android:label="Selection view"
             android:exported="true">
             <intent-filter>

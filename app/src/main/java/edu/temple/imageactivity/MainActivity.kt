@@ -2,18 +2,21 @@ package edu.temple.imageactivity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.GridLayoutManager
 import kotlinx.android.synthetic.main.activity_selection.*
 
-class SelectionActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_selection)
+
+
+
         var dataList = mutableListOf<ImageData>()
         var  imageAdapter: ImageAdapter = ImageAdapter(this)
-        recyclerView.layoutManager = GridLayoutManager(this,2)
-        recyclerView.adapter = imageAdapter
+
         this
         dataList.add(ImageData("Abyssinian",R.drawable.abyssinian))
         dataList.add(ImageData("Bengal",R.drawable.bengal))
@@ -29,7 +32,13 @@ class SelectionActivity : AppCompatActivity() {
 
         imageAdapter.setDataList(dataList)
 
+        val selectionFragment: Fragment = SelectionFragment(dataList)
+        val displayFragment: Fragment = DisplayFragment()
 
+        supportFragmentManager.beginTransaction()
+            .add(R.id.SelectionFragment, selectionFragment)
+            .add(R.id.DisplayFragment, displayFragment)
+            .commit()
 
 
     }
